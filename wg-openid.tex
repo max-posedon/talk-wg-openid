@@ -1,0 +1,65 @@
+\documentclass{beamer}
+\usepackage[english, russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+
+
+\begin{document}
+
+\title{Wargaming.net\\Как протолкнули OpenID сервер в production}
+\author{Maksim 'max\_posedon' Melnikau}
+\institute{Linux Mobile hobbyist\\World of Tanks developer}
+\date{\today}
+\frame{\titlepage}
+
+\begin{frame}[fragile]
+    \frametitle{Intro}
+    \begin{itemize}
+    \item OpenID --- это открытая децентрализованная система, которая позволяет пользователю использовать единую учётную запись для аутентификации на множестве не связанных друг с другом сайтов, порталов, блогов и форумов.
+    \item LVEE 2012 Summer Edition\\ OpenID and Signle Sign On, Сергей Колосов
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{WG API History}
+    \begin{enumerate}
+    \item Внутреннее (мобильное) API
+    \item "Секретная" аутентификация 
+    \item Регистрация через социальные сети
+    \item OpenID сервер
+    \item Публичное API (coming soon)
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Nine circles of hell}
+    \begin{itemize}
+    \item Team Lead: У нас есть другие, более важные дела
+    \pause
+    \item Resource Manager: У нас нет на это ресурсов
+    \pause
+    \item Department Lead: Нам нужен "единый логин"
+    \pause
+    \item Community Department: Фанаты просят API для логина
+    \pause
+    \item PR: А зачем это нам? Круто! Рекламируем Wargaming ID
+    \pause
+    \item Publisher: А зачем это нам? Круто! Пригодится...
+    \pause
+    \item Security Team: Сайт подделают, логины/пароли украдут!
+    \pause
+    \item Development: Полное непонимание, что это такое
+    \pause
+    \item Release: Сторонние ресурсы плохо реализуют OpenID
+    \end{itemize}
+\end{frame}
+
+\frame{
+    \frametitle{Вопросы и ответы}
+    \begin{itemize}
+    \item openid endpoint: https://ru.wargaming.net/id/
+    \item email/jabber: m\_melnikau@wargaming.net
+    \end{itemize}
+}
+
+\end{document}
